@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",   // 任务的名字叫Build（编译），注意是大小写区分的，等会在launch中调用这个名字
+            "type": "shell",
+            "label": "task g++",    //修改此项
+            "command": "D:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "-fexec-charset=GBK",   // 处理mingw中文编码问题
+                "-finput-charset=UTF-8",// 处理mingw中文编码问题
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "D:\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
