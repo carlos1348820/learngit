@@ -1,3 +1,0 @@
-name:bitch
-age:male
-age:18
